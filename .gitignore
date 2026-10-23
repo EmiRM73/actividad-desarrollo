@@ -1,0 +1,21 @@
+# Python / FastAPI / uv
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+.env
+.pytest_cache/
+
+# Node / React / Vite / pnpm
+node_modules/
+dist/
+dist-ssr/
+*.local
+.npm/
+.pnpm-store/
+
+# OS / Editor
+.DS_Store
+.vscode/
+.idea/
