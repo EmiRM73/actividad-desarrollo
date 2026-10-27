@@ -4,11 +4,11 @@
 
 ## Fases de Desarrollo (Sprints)
 
-### Fase 1: Infraestructura y Setup Base
-- [ ] Inicializar proyectos: `backend` (FastAPI/uv) y `frontend` (Vite/React).
-- [ ] Configurar `docker-compose.yml` para levantar PostgreSQL, Backend y Frontend en red local.
-- [ ] Configurar conexión a la base de datos (SQLModel) y migraciones iniciales.
-- [ ] Setup de tokens de diseño CSS (basado en Google/Material) en Frontend.
+### Fase 1: Infraestructura y Setup Base (Scaffold v0.1.0)
+- [x] Inicializar proyectos: `backend` (FastAPI/uv) y `frontend` (Vite/React). *(Ramas `feat/T1-scaffold-estructura`, `feat/T2-backend-minimo`, `feat/T3-frontend-minimo` - commits `758f2c8`, `a9c78a3`, `d6f2923`)*
+- [x] Configurar `docker-compose.yml` para levantar PostgreSQL, Backend y Frontend en red local. *(Rama `feat/T4-docker-compose-dev` - commit `301a842`)*
+- [x] Configurar conexión inicial a la base de datos (SQLModel). *(Rama `feat/T2-backend-minimo` - commit `a9c78a3`)*
+- [x] Setup de tokens de diseño CSS (basado en Google/Material) en Frontend. *(Rama `feat/T3-frontend-minimo` - commit `d6f2923`)*
 
 ### Fase 2: Backend Core & Auth
 - [ ] Implementar modelos SQLModel (`Usuario`, `Curso`, `Roadmap`).
