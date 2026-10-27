@@ -20,6 +20,8 @@ git clone <tu-repo>
 cd actividad-desarrollo
 cp .env.example .env
 docker compose up
+# → frontend: http://localhost:5173
+# → backend: http://localhost:8000/health
 ```
 
 Una vez levantado:
@@ -72,6 +74,4 @@ Una webapp donde una comunidad de estudiantes construye en conjunto un catálogo
 ## Licencia / uso
 
 Trabajo Práctico — Desarrollo de Software, UTN FR La Plata, 2026.
-Alumno: Emilio Benjamin Rivero
-
 Alumno: Emilio Benjamin Rivero
