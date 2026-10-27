@@ -3,9 +3,29 @@
 > WebApp de gestión de comunidad de cursos: catálogo comunitario de cursos gratuitos
 > + roadmaps personales de aprendizaje.
 >
-> **Estado:** 📚 Documentación (Instancia A) — desarrollo pendiente de aprobación docente.
+> **Estado:** 🚀 Desarrollo (Instancia B — Scaffold inicial)
 
 **Stack:** React 19 + Vite + pnpm · FastAPI + uv · PostgreSQL 18.6 · Docker Compose (dev)
+
+---
+
+## Cómo levantar el proyecto (desarrollo)
+
+### Requisitos previos
+- Docker y Docker Compose instalados.
+
+### Pasos de ejecución
+```bash
+git clone <tu-repo>
+cd actividad-desarrollo
+cp .env.example .env
+docker compose up
+```
+
+Una vez levantado:
+- **Frontend (UI):** [http://localhost:5173](http://localhost:5173)
+- **Backend API (Health check):** [http://localhost:8000/health](http://localhost:8000/health)
+- **Documentación Swagger API:** [http://localhost:8000/docs](http://localhost:8000/docs)
 
 ---
 
@@ -21,9 +41,9 @@ Una webapp donde una comunidad de estudiantes construye en conjunto un catálogo
 | PRD | ¿Para quién, qué problema resuelve, qué hace y qué NO hace? | [docs/PRD.md](docs/PRD.md) |
 | TRD | ¿Cómo lo construimos técnicamente y por qué? | [docs/TRD.md](docs/TRD.md) |
 | UX-UI | ¿Cómo se ve, se siente y se comporta? | [docs/UX-UI.md](docs/UX-UI.md) |
-| APPFlow | ¿Qué pantallas hay y cómo se navega? | [docs/APPFlow.md](docs/APPFlow.md) |
-| BackendSchema | ¿Qué datos persistimos y qué API expone? | [docs/BackendSchema.md](docs/BackendSchema.md) |
-| Implementation Plan | ¿En qué orden construimos y qué significa "hecho"? | [docs/IMPLEMENTATION_PLAN.md](docs/IMPLEMENTATION_PLAN.md) |
+| APPFlow | ¿Qué pantallas hay y cómo se navega? | [docs/appflow.md](docs/appflow.md) |
+| BackendSchema | ¿Qué datos persistimos y qué API expone? | [docs/backend_schema.md](docs/backend_schema.md) |
+| Implementation Plan | ¿En qué orden construimos y qué significa "hecho"? | [docs/plan_de_implementacion.md](docs/plan_de_implementacion.md) |
 
 ## Cómo revisar este repo
 
@@ -35,13 +55,16 @@ Una webapp donde una comunidad de estudiantes construye en conjunto un catálogo
 
 | Instancia | Contenido | Estado |
 |-----------|-----------|--------|
-| A — Documentación | repo + 7 documentos | ⏳ en desarrollo |
-| B — Desarrollo del MVP | ejecución del Implementation Plan | ⏳ pendiente de aprobación |
-| C — Clase 27/10 | testing, Docker multi-stage, gestión del cambio | ⏳ pendiente |
+| A — Documentación | repo + 7 documentos | ✅ Completada |
+| B — Desarrollo del MVP | ejecución del Implementation Plan (Scaffold T1-T5) | 🔄 En curso |
+| C — Clase 27/10 | testing, Docker multi-stage, gestión del cambio | ⏳ Pendiente |
 
-## Versionado
+## Versionado y Flujo de Git
 
-- **Flujo de Git:** Trunk-based development (uso de ramas cortas para features/docs que se integran rápido a main).
+- **Flujo de Git:**
+  - `main`: Solo releases taggeados (`vX.Y.Z`) y `CHANGELOG.md` actualizado.
+  - `dev`: Rama de integración continua.
+  - `feat/T{N}-*` o `fix/*`: Ramas de trabajo para cada ticket, nacen desde `dev` y se mergean a `dev`.
 - **Convención de commits:** Conventional Commits (`feat:`, `fix:`, `docs:`, `test:`, `docker:`, `chore:`).
 
 ---
@@ -49,4 +72,6 @@ Una webapp donde una comunidad de estudiantes construye en conjunto un catálogo
 ## Licencia / uso
 
 Trabajo Práctico — Desarrollo de Software, UTN FR La Plata, 2026.
+Alumno: Emilio Benjamin Rivero
+
 Alumno: Emilio Benjamin Rivero
